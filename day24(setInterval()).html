@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 <body>
-    
+<div class="text-3xl place-self-center mt-20">
+    Practicing setInterval() method in JavaScript
+</div>    
+
+
+    <div id="popUp" class="absolute mx-20 shadow-lg px-2 py-10 my-5 text-xl place-self-center mt-50 hidden">
+       <p class="">
+        This is a pop-up message
+       </p> 
+
+       <button id="dismissPop" class="mt-12 px-4 py-2 bg-[green]/70 text-white rounded-full ml-50 hover:bg-[green]/100 cursor-pointer">
+        Dismiss
+       </button>
+    </div>
+</div>
 
     <script src="day24(setInterval).js"></script>
 </body>
