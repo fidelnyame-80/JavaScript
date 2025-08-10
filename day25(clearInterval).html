@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <div class="mx-10 text-2xl place-self-center mt-30">
+        Applying clearInterval to a setInterval that automatically adds a +1 increment to a counter every 3seconds and stops when it gets to 5
+    </div>
+
+    <div class="place-self-center mt-5 flex ">
+        
+        <div class="">
+            <button class="text-3xl mr-5 bg-[green]/70 text-white px-2">-</button>
+           
+        </div>
+        <p id="count" class="text-3xl ">
+            0
+        </p>
+<div class="">
+     <button class="text-3xl ml-3 bg-[green]/70 text-white px-2">+</button>
+</div>
+
+
+    </div>
+
+    
+<div id="congratsMsg" class="px-3 py-2 place-self-center text-xl shadow-lg mt-5 hidden">
+<p>Congratulations!!! you reached the count of 5</p> 
+<button id="dismiss" class="ml-[15rem] mt-10 bg-[green]/80 text-white px-3 mb-3 rounded-full hover:bg-[green] cursor-pointer">
+    Dismiss
+</button>
+</div>
+
+    <script src="day25(clearInterval).js"></script>
+</body>
+</html>
