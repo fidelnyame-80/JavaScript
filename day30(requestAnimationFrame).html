@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<div id="box" style="width:50px;height:50px;background:red;position:absolute;left:0;"></div>
+
+<script>
+const box = document.getElementById('box');
+let pos = 0; // starting position in pixels
+
+function animate() {
+  pos += .2; // move 2px per frame
+  box.style.left = pos + 'rem'; // apply movement
+
+  if (pos < 50) { // stop when it reaches 500px
+    requestAnimationFrame(animate); // call again for the next frame
+  }else if(pos===50){
+       box.style.right = pos + 'rem';
+    requestAnimationFrame(animate)
+  }
+}
+
+requestAnimationFrame(animate); // start animation
+</script>
+
+<body>
+    
+</body>
+</html>

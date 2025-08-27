@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel Demo</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    .carousel { position: relative; width: 300px; margin: 20px auto; overflow: hidden; }
+    .slide {
+      display: none;
+      width: 100%;
+      padding: 40px;
+      background: #eee;
+      border-radius: 10px;
+    }
+    .active { display: block; }
+    button { margin: 10px; padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <h2>Simple Carousel</h2>
+  
+  <div class="carousel">
+    <div class="slide active">Slide 1: Welcome!</div>
+    <div class="slide">Slide 2: JavaScript is Fun</div>
+    <div class="slide">Slide 3: forEach makes it easier</div>
+  </div>
+
+  <button id="prev">Prev</button>
+  <button id="next">Next</button>
+
+  <script>
+    let slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      // remove "active" from all slides
+      slides.forEach(slide => slide.classList.remove("active"));
+      // add "active" to the chosen slide
+      slides[index].classList.add("active");
+    }
+
+    document.getElementById("next").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length; // loop forward
+      showSlide(currentIndex);
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length; // loop backward
+      showSlide(currentIndex);
+    });
+  </script>
+</body>
+</html>
