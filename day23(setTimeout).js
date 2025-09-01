@@ -4,7 +4,7 @@ const popUp = document.getElementById('popUp');
 const dismissPop = document.getElementById('dismissPop')
 
 function showPopUp(){
-    document.addEventListener('DOMContentLoaded',()=>{
+    document.addEventListener('DOMContentLoaded',()=>{ 
         setTimeout(
             ()=>{
                 popUp.classList.remove('hidden')
