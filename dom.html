@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://i.pinimg.com/1200x/43/63/14/43631472649371aadecc65261c5e6632.jpg" alt=""
+    id="newImage"
+    >
+    <button onclick="clickImage()">
+        Click Me!!!
+    </button>
+    
+
+    <script >
+        //changing the source of the image using js
+        let newImage = document.getElementById('newImage');
+        newImage.src = "https://i.pinimg.com/736x/13/47/6d/13476d0c022097c04b39e3f89f12763e.jpg";
+
+        //creating the function
+        function clickImage(){
+            alert('Button clicked')
+        }
+    </script>
+</body>
+</html>
